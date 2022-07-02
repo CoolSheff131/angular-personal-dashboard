@@ -2,7 +2,7 @@
     <div class="note-card-title">
         {{ note.title}}
     </div>
-    <div class="note-card-content">
+    <div *ngIf="note.content" class="note-card-content">
         {{ note.content }}
     </div>
 </div>
