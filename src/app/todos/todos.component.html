@@ -1,7 +1,8 @@
 <div class="todos-wrapper">
     <div class="container">
 
-        <app-todo-item *ngFor="let todo of todos" [todo]="todo" (click)="toggleCompleted(todo)"></app-todo-item>
+        <app-todo-item *ngFor="let todo of todos" [todo]="todo" (click)="toggleCompleted(todo)"
+            (editClick)="onEditClick(todo)" (deleteClick)="onDeleteClick(todo)"></app-todo-item>
 
         <div class="btns-container btns-centered">
             <a routerLink="add" class="btn add-btn">
