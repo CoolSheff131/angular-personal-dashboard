@@ -3,49 +3,7 @@
 
         <div class="bookmark-tiles-container">
 
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
-            <app-bookmark-tile></app-bookmark-tile>
+            <app-bookmark-tile *ngFor="let bookmark of bookmarks" [bookmark]="bookmark"></app-bookmark-tile>
 
 
         </div>
