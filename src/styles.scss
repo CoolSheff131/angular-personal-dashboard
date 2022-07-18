@@ -91,6 +91,14 @@ a{
 
 .form-field{
     margin-bottom: 20px;
+
+    label.form-label{
+        display: block;
+
+        margin-bottom: 5px;
+        font-weight: 600;
+        color: rgba(black, .8);
+    }
 }
 
 .textbox,
