@@ -16,7 +16,10 @@ export class AddTodoComponent implements OnInit {
   ngOnInit(): void {}
 
   onFormSubmit(form: NgForm) {
-    if (form.invalid) return (this.showValidationErrors = true);
+    if (form.invalid) {
+      this.showValidationErrors = true;
+      return;
+    }
     const todo = new Todo(form.value.text);
     this.todoService.addTodo(todo);
     this.router.navigateByUrl('/todos');

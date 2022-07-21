@@ -23,7 +23,7 @@ export class TodoService {
 
   updateTodo(id: string, updatedTodoFields: Partial<Todo>) {
     const todo = this.getTodo(id);
-    Object.assign(todo, updatedTodoFields);
+    Object.assign(todo!, updatedTodoFields);
   }
 
   deletedTodo(id: string) {
