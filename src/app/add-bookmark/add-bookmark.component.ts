@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Bookmark } from '../shared/bookmark.model';
 import { BookmarkService } from '../shared/bookmark.service';
+import { NotificationService } from '../shared/notification.service';
 
 @Component({
   selector: 'app-add-bookmark',
@@ -12,7 +13,8 @@ import { BookmarkService } from '../shared/bookmark.service';
 export class AddBookmarkComponent implements OnInit {
   constructor(
     private bookmarkService: BookmarkService,
-    private router: Router
+    private router: Router,
+    private notificationService: NotificationService
   ) {}
 
   ngOnInit(): void {}
@@ -23,5 +25,6 @@ export class AddBookmarkComponent implements OnInit {
 
     this.bookmarkService.addBookmark(bookmark);
     this.router.navigateByUrl('/bookmarks');
+    this.notificationService.show('Created bookmark!');
   }
 }

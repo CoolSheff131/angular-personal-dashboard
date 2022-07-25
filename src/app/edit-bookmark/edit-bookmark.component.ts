@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Bookmark } from '../shared/bookmark.model';
 import { BookmarkService } from '../shared/bookmark.service';
+import { NotificationService } from '../shared/notification.service';
 
 @Component({
   selector: 'app-edit-bookmark',
@@ -15,7 +16,8 @@ export class EditBookmarkComponent implements OnInit {
   constructor(
     private bookmarkService: BookmarkService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private notificationService: NotificationService
   ) {}
 
   ngOnInit(): void {
@@ -32,10 +34,13 @@ export class EditBookmarkComponent implements OnInit {
       name,
       url: new URL(url),
     });
+
+    this.notificationService.show('Bookmark updated!');
   }
 
   delete() {
     this.bookmarkService.deleteBookmark(this.bookmark.id);
     this.router.navigate(['../'], { relativeTo: this.route });
+    this.notificationService.show('Bookmark deleted!');
   }
 }
