@@ -39,7 +39,12 @@ export class TodosComponent implements OnInit {
   onEditClick(todo: Todo) {
     this.router.navigate(['/todos', todo.id]);
   }
+
   onDeleteClick(todo: Todo) {
     this.todoService.deletedTodo(todo.id);
+  }
+
+  trackById(index: number, item: Todo) {
+    return item.id;
   }
 }
