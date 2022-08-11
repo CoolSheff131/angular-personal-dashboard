@@ -1,4 +1,11 @@
 <div class="app-wrapper">
+
+  <img *ngFor="let bg of backgrounds.reverse()" [src]="bg" class="bg-img" @bgAnim (load)="onBGImageLoad($event)">
+
+  <div class="btn change-bg-btn" (click)="changeBGImage()" *ngIf="!loadingBGImage" @fadeAnim>
+    <i class="material-icons">refresh</i>
+  </div>
+
   <div class="top-section">
     <h1>19:00</h1>
     <h2>1 January 2022</h2>
